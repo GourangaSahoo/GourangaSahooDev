@@ -59,6 +59,18 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
         {/* Main Content */}
         <div className="space-y-8 animate-fade-in">
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-8">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/3e3d8243-8a15-4cbf-895c-8b624998408d.png"
+                alt="Pritam Kumar Ghosh - Data Analyst and ML Engineer"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 shadow-hero hover:border-primary/40 transition-all duration-300 float-animation"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-secondary-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+
           {/* Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-sora font-bold tracking-tight">
