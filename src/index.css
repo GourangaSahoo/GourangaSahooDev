@@ -221,6 +221,22 @@
   }
 
   @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Typewriter cursor animation */
+  .typewriter-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  }
+
+  @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     33% { transform: translateY(-10px) rotate(1deg); }
     66% { transform: translateY(-5px) rotate(-1deg); }

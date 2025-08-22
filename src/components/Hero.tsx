@@ -1,10 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, ExternalLink, MapPin, Phone, Mail, Copy } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const { toast } = useToast();
+  const [currentRole, setCurrentRole] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const roles = ["Data Analyst", "ML Engineer"];
+
+  useEffect(() => {
+    const currentText = roles[roleIndex];
+    
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIndex < currentText.length) {
+          setCurrentRole(prev => prev + currentText[charIndex]);
+          setCharIndex(prev => prev + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        if (charIndex > 0) {
+          setCurrentRole(prev => prev.slice(0, -1));
+          setCharIndex(prev => prev - 1);
+        } else {
+          setIsDeleting(false);
+          setRoleIndex(prev => (prev + 1) % roles.length);
+        }
+      }
+    }, isDeleting ? 100 : 150);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, roleIndex, roles]);
 
   const socialLinks = [
     {
@@ -65,9 +97,9 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/3e3d8243-8a15-4cbf-895c-8b624998408d.png"
                 alt="Pritam Kumar Ghosh - Data Analyst and ML Engineer"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 shadow-hero hover:border-primary/40 transition-all duration-300 float-animation"
+                className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-primary/30 shadow-hero hover:border-primary/50 transition-all duration-500"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-secondary-accent/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-secondary-accent/10 hover:from-primary/20 hover:to-secondary-accent/20 transition-all duration-500"></div>
             </div>
           </div>
 
@@ -77,10 +109,11 @@ const Hero = () => {
               Pritam Kumar <span className="gradient-text">Ghosh</span>
             </h1>
             
-            <div className="text-xl md:text-2xl text-muted-foreground font-medium space-y-2">
+            <div className="text-xl md:text-2xl font-medium h-16 flex items-center justify-center">
               <div className="font-display">
-                <span className="text-primary font-semibold">Data Analyst</span> • 
-                <span className="text-secondary-accent ml-2">ML Engineer</span>
+                <span className="text-muted-foreground">I am a </span>
+                <span className="text-primary font-semibold">{currentRole}</span>
+                <span className="text-primary animate-pulse">|</span>
               </div>
             </div>
           </div>
