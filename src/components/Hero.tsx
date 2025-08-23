@@ -160,9 +160,9 @@ const Hero = () => {
                 {link.isCustomIcon ? (
                   <div className="h-6 w-6 flex items-center justify-center">
                      {link.customIconType === "hackerrank" ? (
-                       <img src="/src/assets/hackerrank-logo.png" alt="HackerRank" className="w-6 h-6" />
+                       <img src="/lovable-uploads/fb3b39a9-3e7a-4198-9665-bef29799399b.png" alt="HackerRank" className="w-6 h-6" />
                      ) : link.customIconType === "leetcode" ? (
-                       <img src="/src/assets/leetcode-logo.png" alt="LeetCode" className="w-6 h-6" />
+                       <img src="/lovable-uploads/4ccf4563-51df-436e-86f8-ead92c6b12a1.png" alt="LeetCode" className="w-6 h-6" />
                     ) : (
                       <link.icon className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
                     )}

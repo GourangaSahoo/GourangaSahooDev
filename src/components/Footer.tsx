@@ -28,11 +28,15 @@ const Footer = () => {
       name: "HackerRank",
       url: "https://www.hackerrank.com/profile/gpritam1471",
       icon: ExternalLink,
+      isCustomIcon: true,
+      customIconType: "hackerrank"
     },
     {
       name: "LeetCode",
       url: "https://leetcode.com/u/Pritam_Kumar_Ghosh/",
       icon: ExternalLink,
+      isCustomIcon: true,
+      customIconType: "leetcode"
     },
   ];
 
@@ -98,7 +102,17 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  <link.icon className="h-4 w-4" />
+                  {link.isCustomIcon ? (
+                    link.customIconType === "hackerrank" ? (
+                      <img src="/lovable-uploads/fb3b39a9-3e7a-4198-9665-bef29799399b.png" alt="HackerRank" className="h-4 w-4" />
+                    ) : link.customIconType === "leetcode" ? (
+                      <img src="/lovable-uploads/4ccf4563-51df-436e-86f8-ead92c6b12a1.png" alt="LeetCode" className="h-4 w-4" />
+                    ) : (
+                      <link.icon className="h-4 w-4" />
+                    )
+                  ) : (
+                    <link.icon className="h-4 w-4" />
+                  )}
                   <span>{link.name}</span>
                 </a>
               ))}
