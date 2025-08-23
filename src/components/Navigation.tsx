@@ -14,6 +14,7 @@ const Navigation = () => {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Education", href: "#education" },
+    { label: "Certifications", href: "#certifications" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -44,7 +45,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <div className="font-display font-bold text-2xl gradient-text">
-          PG
+          Pritam
         </div>
 
         {/* Desktop Navigation */}
@@ -71,7 +72,11 @@ const Navigation = () => {
             {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </Button>
           
-          <Button variant="default" className="hidden md:flex items-center space-x-2 btn-pill">
+          <Button 
+            variant="default" 
+            className="hidden md:flex items-center space-x-2 btn-pill"
+            onClick={() => window.open("https://drive.google.com/file/d/1U1I0ao7gFYLjhdjo2pIWyOOfz6Ela6RP/view?usp=drive_link", "_blank")}
+          >
             <Download className="h-4 w-4" />
             <span>Resume</span>
           </Button>
@@ -105,7 +110,11 @@ const Navigation = () => {
               <Button variant="ghost" size="icon" onClick={toggleTheme}>
                 {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
               </Button>
-              <Button variant="default" className="flex items-center space-x-2 btn-pill">
+              <Button 
+                variant="default" 
+                className="flex items-center space-x-2 btn-pill"
+                onClick={() => window.open("https://drive.google.com/file/d/1U1I0ao7gFYLjhdjo2pIWyOOfz6Ela6RP/view?usp=drive_link", "_blank")}
+              >
                 <Download className="h-4 w-4" />
                 <span>Resume</span>
               </Button>

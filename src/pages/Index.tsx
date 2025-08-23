@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -59,6 +60,10 @@ const Index = () => {
           
           <div className="reveal-on-scroll">
             <Education />
+          </div>
+          
+          <div className="reveal-on-scroll">
+            <Certifications />
           </div>
           
           <div className="reveal-on-scroll">

@@ -210,14 +210,18 @@ const Contact = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-sora font-semibold mb-6">Quick Actions</h3>
                 <div className="space-y-3">
-                  <Button variant="outline" className="w-full btn-pill justify-start">
+                  <Button 
+                    variant="outline" 
+                    className="w-full btn-pill justify-start"
+                    onClick={() => window.open("https://drive.google.com/file/d/1U1I0ao7gFYLjhdjo2pIWyOOfz6Ela6RP/view?usp=drive_link", "_blank")}
+                  >
                     <Download className="h-4 w-4 mr-2" />
                     Download Resume
                   </Button>
                   <Button
                     variant="outline"
                     className="w-full btn-pill justify-start"
-                    onClick={() => window.open("https://calendly.com/pritam-portfolio", "_blank")}
+                    onClick={() => window.open("https://topmate.io/pritam_kumar_ghosh/", "_blank")}
                   >
                     <Calendar className="h-4 w-4 mr-2" />
                     Schedule a Call

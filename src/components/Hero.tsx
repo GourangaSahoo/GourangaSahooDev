@@ -53,11 +53,15 @@ const Hero = () => {
       name: "HackerRank",
       url: "https://www.hackerrank.com/profile/gpritam1471",
       icon: ExternalLink,
+      isCustomIcon: true,
+      customIconType: "hackerrank"
     },
     {
-      name: "LeetCode",
+      name: "LeetCode", 
       url: "https://leetcode.com/u/Pritam_Kumar_Ghosh/",
       icon: ExternalLink,
+      isCustomIcon: true,
+      customIconType: "leetcode"
     },
   ];
 
@@ -153,7 +157,23 @@ const Hero = () => {
                 className="p-3 glass-card hover:bg-primary/5 transition-all duration-300 group animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <link.icon className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                {link.isCustomIcon ? (
+                  <div className="h-6 w-6 flex items-center justify-center">
+                    {link.customIconType === "hackerrank" ? (
+                      <div className="w-6 h-6 bg-[#2EC866] rounded flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">HR</span>
+                      </div>
+                    ) : link.customIconType === "leetcode" ? (
+                      <div className="w-6 h-6 bg-[#FFA116] rounded flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">LC</span>
+                      </div>
+                    ) : (
+                      <link.icon className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                    )}
+                  </div>
+                ) : (
+                  <link.icon className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                )}
               </a>
             ))}
           </div>
@@ -168,7 +188,7 @@ const Hero = () => {
               
               <div className="flex items-center justify-center space-x-2 text-muted-foreground">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                <span>Open to Data Analyst roles</span>
+                <span>Fresher (2 months internship)</span>
               </div>
               
               <div className="flex items-center justify-center space-x-2 text-muted-foreground">
