@@ -16,8 +16,8 @@ const About = () => {
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary mb-2">2+</div>
-              <div className="text-sm text-muted-foreground">Years of Experience</div>
+              <div className="text-2xl font-bold text-primary mb-2">Fresher</div>
+              <div className="text-sm text-muted-foreground">Less than 1 year</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-primary mb-2">3+</div>

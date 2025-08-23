@@ -159,14 +159,10 @@ const Hero = () => {
               >
                 {link.isCustomIcon ? (
                   <div className="h-6 w-6 flex items-center justify-center">
-                    {link.customIconType === "hackerrank" ? (
-                      <div className="w-6 h-6 bg-[#2EC866] rounded flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">HR</span>
-                      </div>
-                    ) : link.customIconType === "leetcode" ? (
-                      <div className="w-6 h-6 bg-[#FFA116] rounded flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">LC</span>
-                      </div>
+                     {link.customIconType === "hackerrank" ? (
+                       <img src="/src/assets/hackerrank-logo.png" alt="HackerRank" className="w-6 h-6" />
+                     ) : link.customIconType === "leetcode" ? (
+                       <img src="/src/assets/leetcode-logo.png" alt="LeetCode" className="w-6 h-6" />
                     ) : (
                       <link.icon className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
                     )}
@@ -188,7 +184,7 @@ const Hero = () => {
               
               <div className="flex items-center justify-center space-x-2 text-muted-foreground">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                <span>Fresher (2 months internship)</span>
+                <span>Open to work as a data analyst</span>
               </div>
               
               <div className="flex items-center justify-center space-x-2 text-muted-foreground">

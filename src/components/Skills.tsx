@@ -13,8 +13,7 @@ const Skills = () => {
         { name: "Data Visualization", level: 85 },
         { name: "Statistical Analysis", level: 80 },
         { name: "Excel/Advanced Excel", level: 88 },
-        { name: "Power BI", level: 85 },
-        { name: "Tableau", level: 82 }
+        { name: "Power BI", level: 85 }
       ]
     },
     {
