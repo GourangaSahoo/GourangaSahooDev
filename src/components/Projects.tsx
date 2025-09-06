@@ -10,7 +10,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Criminal Detection System",
+      title: "Weapon Detection System",
       subtitle: "Real-Time Weapon Detection & Alerts",
       description: "AI-powered security system using YOLO for real-time weapon detection with instant SMS alerts to authorities.",
       icon: Shield,
@@ -51,7 +51,7 @@ const Projects = () => {
           "Create mobile app for security personnel",
           "Add integration with existing security systems"
         ],
-        github: "https://github.com/6Pritam/criminal-detection",
+        github: "https://github.com/6Pritam/Weapon_Detection",
         demo: ""
       }
     },
@@ -64,7 +64,6 @@ const Projects = () => {
       color: "bg-orange-500",
       type: "powerbi",
       images: ["/lovable-uploads/49c187fc-7ffe-4bf3-b4ea-eb8c55fa548c.png", "/lovable-uploads/eefec041-5a9a-44b3-a1f5-2e416352528f.png"],
-      videoDemo: "Screen Recording 2025-09-05 213531.mp4",
       details: {
         problem: "The business needed comprehensive insights on revenue, order trends, sales by category & size, and identification of best/worst performing pizzas to make data-driven decisions.",
         overview: "Analyzed pizza sales data to calculate KPIs, track sales trends, and identify top/bottom-performing pizzas. Built an interactive Power BI dashboard for decision-making.",
@@ -97,38 +96,7 @@ const Projects = () => {
           "Create automated reporting and alert systems",
           "Integrate with real-time sales data sources"
         ],
-        github: "",
-        demo: ""
-      }
-    },
-    {
-      title: "Power BI Project 3",
-      subtitle: "Coming Soon - Advanced Analytics",
-      description: "Advanced Power BI dashboard project currently in development. Details will be updated once completed.",
-      icon: Zap,
-      tools: ["Power BI", "SQL", "DAX"],
-      color: "bg-purple-500",
-      type: "powerbi",
-      isPlaceholder: true,
-      details: {
-        problem: "Project details will be added once development is complete.",
-        overview: "This project is currently in development. Check back soon for full details including problem statement, approach, dashboard highlights, and outcomes.",
-        approach: [
-          "Project planning and requirements gathering in progress",
-          "Data source identification and preparation",
-          "Dashboard design and development",
-          "Testing and optimization phase"
-        ],
-        results: [
-          "Project outcomes will be documented upon completion",
-          "Performance metrics and insights to be shared",
-          "Business impact and recommendations forthcoming"
-        ],
-        improvements: [
-          "Future enhancements will be planned based on initial results",
-          "User feedback will drive iterative improvements"
-        ],
-        github: "",
+        github: "https://github.com/6Pritam/Pizza-Sales-Dashboard-using-SQL-Power-BI-Excel",
         demo: ""
       }
     }
@@ -185,9 +153,8 @@ const Projects = () => {
                     variant="outline" 
                     className="w-full btn-pill group-hover:border-primary/40 transition-colors relative z-10"
                     onClick={() => setSelectedProject(index)}
-                    disabled={project.isPlaceholder}
                   >
-                    {project.isPlaceholder ? "Coming Soon" : "View Details"}
+                    View Details
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-6xl max-h-[85vh] overflow-y-auto custom-scrollbar">
@@ -228,11 +195,6 @@ const Projects = () => {
                           <CarouselPrevious />
                           <CarouselNext />
                         </Carousel>
-                        {project.videoDemo && (
-                          <div className="mt-4 text-center">
-                            <p className="text-sm text-muted-foreground mb-2">🎥 Video Demo Available: {project.videoDemo}</p>
-                          </div>
-                        )}
                       </div>
                     )}
 
@@ -331,12 +293,6 @@ const Projects = () => {
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Live Demo
                           </a>
-                        </Button>
-                      )}
-                      {project.videoDemo && (
-                        <Button variant="outline" className="btn-pill">
-                          <Play className="h-4 w-4 mr-2" />
-                          Video Demo
                         </Button>
                       )}
                     </div>
