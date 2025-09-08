@@ -4,6 +4,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Github, ExternalLink, Shield, BarChart3, Zap, Play } from "lucide-react";
+import weaponDetectionCard from "@/assets/weapon-detection-card.jpg";
+import pizzaDashboardCard from "@/assets/pizza-dashboard-card.jpg";
+import idExtractionCard from "@/assets/id-extraction-card.jpg";
+import autocompleteCard from "@/assets/autocomplete-card.jpg";
+import spamDetectionCard from "@/assets/spam-detection-card.jpg";
+import bankLoanCard from "@/assets/bank-loan-card.jpg";
+import evAnalysisCard from "@/assets/ev-analysis-card.jpg";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -17,6 +24,7 @@ const Projects = () => {
       tools: ["Python", "Flask", "YOLO", "OpenCV", "Twilio API", "JavaScript"],
       color: "bg-red-500",
       type: "ml",
+      cardImage: weaponDetectionCard,
       details: {
         problem: "Need for an AI-powered criminal detection system that can monitor live video feeds and automatically alert authorities when weapons are detected, providing enhanced security for public spaces.",
         overview: "An AI-powered criminal detection system that uses YOLO for real-time weapon detection via live video feed. Integrated with Flask for a web dashboard and Twilio API for instant SMS alerts to authorities with weapon type, location, and timestamp.",
@@ -63,6 +71,7 @@ const Projects = () => {
       tools: ["SQL", "Excel", "Power Query", "Power BI"],
       color: "bg-orange-500",
       type: "powerbi",
+      cardImage: pizzaDashboardCard,
       images: ["/lovable-uploads/49c187fc-7ffe-4bf3-b4ea-eb8c55fa548c.png", "/lovable-uploads/eefec041-5a9a-44b3-a1f5-2e416352528f.png"],
       details: {
         problem: "The business needed comprehensive insights on revenue, order trends, sales by category & size, and identification of best/worst performing pizzas to make data-driven decisions.",
@@ -108,6 +117,7 @@ const Projects = () => {
       tools: ["Python", "OCR", "NLP", "OpenCV", "Tesseract"],
       color: "bg-blue-500",
       type: "ml",
+      cardImage: idExtractionCard,
       details: {
         problem: "Manual data entry from government ID cards is time-consuming, error-prone, and inefficient for large-scale document processing systems.",
         overview: "An automated system that extracts and structures information from government ID cards using OCR and NLP technologies, converting unstructured text into organized data fields.",
@@ -154,6 +164,7 @@ const Projects = () => {
       tools: ["Python", "LSTM", "TensorFlow", "NLP", "Flask", "JavaScript"],
       color: "bg-green-500",
       type: "ml",
+      cardImage: autocompleteCard,
       details: {
         problem: "Need for an intelligent text prediction system that can learn from specific document corpora and provide contextually relevant word suggestions to improve typing efficiency.",
         overview: "A custom text autocomplete system using LSTM neural networks, trained on PDF-extracted text data, featuring an interactive UI for model training and real-time word prediction.",
@@ -200,6 +211,7 @@ const Projects = () => {
       tools: ["Python", "Scikit-learn", "TensorFlow", "NLP", "Pandas", "Flask"],
       color: "bg-purple-500",
       type: "ml",
+      cardImage: spamDetectionCard,
       details: {
         problem: "Email spam poses security risks and reduces productivity. Need for an intelligent system that can accurately classify and filter spam messages with high precision.",
         overview: "A comprehensive spam detection system that uses both traditional machine learning and deep learning approaches to classify emails and messages, providing a deployable solution for spam filtering.",
@@ -246,9 +258,9 @@ const Projects = () => {
       tools: ["SQL", "MS SQL Server", "Excel", "Power Query", "Power BI"],
       color: "bg-blue-600",
       type: "powerbi",
+      cardImage: bankLoanCard,
       images: [
         "/lovable-uploads/175933aa-2b18-475d-a193-9b4cc6bd3742.png",
-        "/lovable-uploads/b344f8f7-04c2-4b67-9ba9-0fce537bc076.png", 
         "/lovable-uploads/bfa30879-5760-4abd-a075-f3356502e133.png",
         "/lovable-uploads/80522faa-5238-47ee-a631-bb2b88824429.png"
       ],
@@ -296,6 +308,7 @@ const Projects = () => {
       tools: ["Excel", "Power Query", "Power BI", "Data Modeling"],
       color: "bg-green-600",
       type: "powerbi",
+      cardImage: evAnalysisCard,
       images: ["/lovable-uploads/d548c121-f5ba-4b67-9ba9-0fce537bc076.png"],
       details: {
         problem: "Need for comprehensive analysis of electric vehicle adoption trends, market performance, and geographical distribution to support policy making and business strategies in the sustainable transport sector.",
@@ -349,7 +362,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="glass-card p-6 group hover:shadow-hero transition-all duration-300 relative overflow-hidden">
+            <div key={index} className="glass-card group hover:shadow-hero transition-all duration-300 relative overflow-hidden">
               {/* Animated background for ML project */}
               {project.type === "ml" && (
                 <div className="absolute inset-0 opacity-10">
@@ -357,40 +370,51 @@ const Projects = () => {
                 </div>
               )}
               
-              <div className={`w-12 h-12 ${project.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
-                <project.icon className="h-6 w-6 text-white" />
+              {/* Project Image */}
+              <div className="relative overflow-hidden rounded-t-lg">
+                <img 
+                  src={project.cardImage} 
+                  alt={project.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               
-              <h3 className="text-xl font-sora font-semibold mb-2 group-hover:text-primary transition-colors relative z-10">
-                {project.title}
-              </h3>
+              <div className="p-6">
+                <div className={`w-12 h-12 ${project.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                  <project.icon className="h-6 w-6 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-sora font-semibold mb-2 group-hover:text-primary transition-colors relative z-10">
+                  {project.title}
+                </h3>
               
-              <p className="text-sm text-secondary-accent font-medium mb-3 relative z-10">
-                {project.subtitle}
-              </p>
-              
-              <p className="text-muted-foreground mb-4 line-clamp-3 relative z-10">
-                {project.description}
-              </p>
+                <p className="text-sm text-secondary-accent font-medium mb-3 relative z-10">
+                  {project.subtitle}
+                </p>
+                
+                <p className="text-muted-foreground mb-4 line-clamp-3 relative z-10">
+                  {project.description}
+                </p>
 
-              <div className="flex flex-wrap gap-2 mb-6 relative z-10">
-                {project.tools.map((tool, i) => (
-                  <Badge key={i} variant="secondary" className="text-xs">
-                    {tool}
-                  </Badge>
-                ))}
-              </div>
+                <div className="flex flex-wrap gap-2 mb-6 relative z-10">
+                  {project.tools.map((tool, i) => (
+                    <Badge key={i} variant="secondary" className="text-xs">
+                      {tool}
+                    </Badge>
+                  ))}
+                </div>
 
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button 
-                    variant="outline" 
-                    className="w-full btn-pill group-hover:border-primary/40 transition-colors relative z-10"
-                    onClick={() => setSelectedProject(index)}
-                  >
-                    View Details
-                  </Button>
-                </DialogTrigger>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      variant="outline" 
+                      className="w-full btn-pill group-hover:border-primary/40 transition-colors relative z-10"
+                      onClick={() => setSelectedProject(index)}
+                    >
+                      View Details
+                    </Button>
+                  </DialogTrigger>
                 <DialogContent className="max-w-6xl max-h-[85vh] overflow-y-auto custom-scrollbar">
                   <DialogHeader>
                     <DialogTitle className="text-2xl font-sora flex items-center gap-3">
@@ -532,7 +556,8 @@ const Projects = () => {
                     </div>
                   </div>
                 </DialogContent>
-              </Dialog>
+                </Dialog>
+              </div>
             </div>
           ))}
         </div>
