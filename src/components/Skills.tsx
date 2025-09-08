@@ -12,8 +12,17 @@ const Skills = () => {
         { name: "Data Analysis", level: 90 },
         { name: "Data Visualization", level: 85 },
         { name: "Statistical Analysis", level: 80 },
-        { name: "Excel/Advanced Excel", level: 88 },
-        { name: "Power BI", level: 85 }
+        { name: "Excel", level: 88 },
+        { name: "Advanced Excel", level: 88 },
+        { name: "Power BI", level: 85 },
+        { name: "ETL", level: 82 },
+        { name: "EDA (Exploratory Data Analysis)", level: 85 },
+        { name: "Power Query", level: 80 },
+        { name: "DAX", level: 78 },
+        { name: "Data Cleaning", level: 88 },
+        { name: "Data Modelling", level: 83 },
+        { name: "Data Processing", level: 86 },
+        { name: "Data Collection", level: 85 }
       ]
     },
     {
@@ -25,7 +34,13 @@ const Skills = () => {
         { name: "Deep Learning", level: 82 },
         { name: "NLP", level: 85 },
         { name: "Model Development", level: 86 },
-        { name: "Data Preprocessing", level: 90 }
+        { name: "Data Preprocessing/Cleaning", level: 90 },
+        { name: "Model Testing", level: 83 },
+        { name: "OpenCV", level: 85 },
+        { name: "YOLO", level: 80 },
+        { name: "OCR", level: 82 },
+        { name: "LSTM", level: 78 },
+        { name: "TensorFlow", level: 85 }
       ]
     },
     {

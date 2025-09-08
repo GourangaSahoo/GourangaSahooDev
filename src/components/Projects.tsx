@@ -249,7 +249,8 @@ const Projects = () => {
       images: [
         "/lovable-uploads/175933aa-2b18-475d-a193-9b4cc6bd3742.png",
         "/lovable-uploads/b344f8f7-04c2-4b67-9ba9-0fce537bc076.png", 
-        "/lovable-uploads/bfa30879-5760-4abd-a075-f3356502e133.png"
+        "/lovable-uploads/bfa30879-5760-4abd-a075-f3356502e133.png",
+        "/lovable-uploads/80522faa-5238-47ee-a631-bb2b88824429.png"
       ],
       details: {
         problem: "Banks needed comprehensive analysis of loan portfolio performance, risk assessment, and borrower behavior to make informed lending decisions and reduce default rates.",
