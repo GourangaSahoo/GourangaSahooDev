@@ -99,6 +99,144 @@ const Projects = () => {
         github: "https://github.com/6Pritam/Pizza-Sales-Dashboard-using-SQL-Power-BI-Excel",
         demo: ""
       }
+    },
+    {
+      title: "Government ID Card Data Extraction",
+      subtitle: "OCR | NLP | Structured Data Processing",
+      description: "Converts unstructured text from government ID cards into structured data fields using advanced OCR and NLP techniques.",
+      icon: Shield,
+      tools: ["Python", "OCR", "NLP", "OpenCV", "Tesseract"],
+      color: "bg-blue-500",
+      type: "ml",
+      details: {
+        problem: "Manual data entry from government ID cards is time-consuming, error-prone, and inefficient for large-scale document processing systems.",
+        overview: "An automated system that extracts and structures information from government ID cards using OCR and NLP technologies, converting unstructured text into organized data fields.",
+        features: [
+          "🔍 Advanced OCR for text extraction from ID cards",
+          "🧠 NLP processing for data field identification",
+          "📋 Structured data output in JSON/CSV format",
+          "🎯 High accuracy text recognition and parsing",
+          "📄 Support for multiple ID card formats",
+          "⚡ Fast batch processing capabilities"
+        ],
+        approach: [
+          "Implemented advanced OCR using Tesseract and OpenCV for image preprocessing",
+          "Applied NLP techniques for text parsing and field identification",
+          "Created data validation and error correction mechanisms",
+          "Built structured output formatting for database integration",
+          "Optimized for various image qualities and lighting conditions",
+          "Developed batch processing capabilities for large datasets"
+        ],
+        results: [
+          "Automated data entry process with 95%+ accuracy",
+          "Reduced manual processing time by 80%",
+          "Structured data output ready for database integration",
+          "Support for multiple government ID formats",
+          "Robust error handling and data validation",
+          "Scalable solution for high-volume processing"
+        ],
+        outcomes: "Significantly reduces manual effort in data entry processes, improves accuracy, and enables faster document processing for government and business applications.",
+        improvements: [
+          "Add support for international ID card formats",
+          "Implement machine learning for improved field recognition",
+          "Create web interface for easier document upload",
+          "Add real-time processing capabilities"
+        ],
+        github: "",
+        demo: ""
+      }
+    },
+    {
+      title: "Text Autocomplete & Suggestion System",
+      subtitle: "LSTM | NLP | Real-time Prediction",
+      description: "Next-word prediction system using LSTM neural networks trained on PDF-extracted text with interactive UI for real-time suggestions.",
+      icon: Zap,
+      tools: ["Python", "LSTM", "TensorFlow", "NLP", "Flask", "JavaScript"],
+      color: "bg-green-500",
+      type: "ml",
+      details: {
+        problem: "Need for an intelligent text prediction system that can learn from specific document corpora and provide contextually relevant word suggestions to improve typing efficiency.",
+        overview: "A custom text autocomplete system using LSTM neural networks, trained on PDF-extracted text data, featuring an interactive UI for model training and real-time word prediction.",
+        features: [
+          "🧠 LSTM-based next-word prediction model",
+          "📚 PDF text extraction for training data",
+          "🎯 Real-time word suggestions and autocomplete",
+          "💻 Interactive web interface for model training",
+          "📊 Performance metrics and accuracy tracking",
+          "⚡ Fast response time for real-time predictions"
+        ],
+        approach: [
+          "Implemented PDF text extraction pipeline for training data preparation",
+          "Built LSTM neural network architecture for sequence modeling",
+          "Created text preprocessing and tokenization workflows",
+          "Developed Flask web application for model interaction",
+          "Implemented real-time prediction API endpoints",
+          "Added model performance monitoring and evaluation metrics"
+        ],
+        results: [
+          "Achieved high accuracy in next-word predictions",
+          "Real-time text suggestions with sub-second response time",
+          "Scalable model architecture for different text domains",
+          "Interactive training interface for model customization",
+          "Comprehensive evaluation metrics and performance tracking",
+          "Deployable system ready for integration"
+        ],
+        outcomes: "Demonstrates expertise in sequence modeling and NLP, providing a practical solution for improving typing efficiency and showcasing advanced deep learning capabilities.",
+        improvements: [
+          "Add support for multiple languages",
+          "Implement attention mechanisms for better context understanding",
+          "Create mobile app version",
+          "Add personalized learning from user behavior"
+        ],
+        github: "",
+        demo: ""
+      }
+    },
+    {
+      title: "Spam Detection System",
+      subtitle: "ML | Deep Learning | Email Classification",
+      description: "Advanced spam classification system using machine learning and deep learning techniques for filtering emails and messages.",
+      icon: Shield,
+      tools: ["Python", "Scikit-learn", "TensorFlow", "NLP", "Pandas", "Flask"],
+      color: "bg-purple-500",
+      type: "ml",
+      details: {
+        problem: "Email spam poses security risks and reduces productivity. Need for an intelligent system that can accurately classify and filter spam messages with high precision.",
+        overview: "A comprehensive spam detection system that uses both traditional machine learning and deep learning approaches to classify emails and messages, providing a deployable solution for spam filtering.",
+        features: [
+          "🤖 Multiple ML algorithms for spam classification",
+          "🧠 Deep learning models for advanced pattern recognition",
+          "📧 Email and text message processing capabilities",
+          "📊 Performance comparison between different models",
+          "🎯 High accuracy with low false positive rates",
+          "🚀 Deployable API for real-time classification"
+        ],
+        approach: [
+          "Implemented feature extraction using TF-IDF and word embeddings",
+          "Trained multiple ML models: Naive Bayes, SVM, Random Forest",
+          "Built deep learning models using neural networks and LSTM",
+          "Created comprehensive text preprocessing pipeline",
+          "Developed model evaluation and comparison framework",
+          "Built Flask API for model deployment and inference"
+        ],
+        results: [
+          "Achieved 95%+ accuracy in spam classification",
+          "Low false positive rate maintaining email reliability",
+          "Robust performance across different email formats",
+          "Fast classification suitable for real-time filtering",
+          "Comprehensive model comparison and optimization",
+          "Production-ready deployment pipeline"
+        ],
+        outcomes: "Provides a reliable spam filtering solution that improves communication security and productivity while demonstrating proficiency in both traditional ML and deep learning approaches.",
+        improvements: [
+          "Add support for multimedia content analysis",
+          "Implement online learning for adaptive filtering",
+          "Create user feedback integration for model improvement",
+          "Add multi-language spam detection capabilities"
+        ],
+        github: "",
+        demo: ""
+      }
     }
   ];
 
