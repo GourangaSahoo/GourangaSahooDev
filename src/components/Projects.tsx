@@ -237,6 +237,101 @@ const Projects = () => {
         github: "",
         demo: ""
       }
+    },
+    {
+      title: "Bank Loan Analysis",
+      subtitle: "Power BI | SQL | Excel Analytics",
+      description: "Analyzed 38.6K+ loan applications to evaluate portfolio health, repayment risks, and borrower reliability with comprehensive dashboards.",
+      icon: BarChart3,
+      tools: ["SQL", "MS SQL Server", "Excel", "Power Query", "Power BI"],
+      color: "bg-blue-600",
+      type: "powerbi",
+      images: [
+        "/lovable-uploads/175933aa-2b18-475d-a193-9b4cc6bd3742.png",
+        "/lovable-uploads/b344f8f7-04c2-4b67-9ba9-0fce537bc076.png", 
+        "/lovable-uploads/bfa30879-5760-4abd-a075-f3356502e133.png"
+      ],
+      details: {
+        problem: "Banks needed comprehensive analysis of loan portfolio performance, risk assessment, and borrower behavior to make informed lending decisions and reduce default rates.",
+        overview: "Analyzed 38.6K+ loan applications to evaluate portfolio health, repayment risks, and borrower reliability. Built comprehensive Power BI dashboards with multi-level navigation for detailed loan analysis.",
+        approach: [
+          "SQL (MS SQL Server): Complex queries for data extraction and KPI calculations",
+          "Excel: Data cleaning and preliminary analysis of loan datasets",
+          "Power Query: Advanced data transformation and modeling",
+          "Power BI: Multi-dashboard solution with Summary, Overview, and Details views"
+        ],
+        dashboardHighlights: [
+          "📊 KPIs: Loan Applications (38.6K), Funded ($435.8M), Received ($473.1M), Avg Interest Rate (12%), Avg DTI (13.3%)",
+          "✅ Good (86.2%) vs Bad (13.8%) Loan Segmentation with risk analysis",
+          "🏠 Loan distribution by Purpose, Home Ownership, Term, Employment Length",
+          "📈 Monthly trend analysis for seasonality and growth patterns",
+          "🔍 Multi-level navigation: Summary, Overview, Details dashboards",
+          "📋 Detailed loan records with borrower profiles and payment history"
+        ],
+        results: [
+          "Identified 86.2% good loans vs 13.8% bad loans for risk assessment",
+          "Analyzed $435.8M in funded amounts with $473.1M received",
+          "Discovered seasonal trends and peak lending periods",
+          "Segmented borrowers by employment length and home ownership",
+          "Created actionable insights for loan approval processes",
+          "Built comprehensive risk profiling dashboard"
+        ],
+        outcomes: "Delivered actionable insights for banks to reduce defaults, optimize funding strategies, and maximize returns through data-driven lending decisions.",
+        improvements: [
+          "Add predictive modeling for default probability",
+          "Implement real-time risk scoring",
+          "Create automated alert systems for high-risk loans",
+          "Add customer lifetime value analysis"
+        ],
+        github: "https://github.com/6Pritam/Bank-Loan-Analysis",
+        demo: ""
+      }
+    },
+    {
+      title: "Electric Vehicle Analysis Dashboard",
+      subtitle: "Power BI | Excel | Market Insights",
+      description: "Built comprehensive EV adoption dashboard tracking growth, performance, and market trends to support sustainable transport strategies.",
+      icon: Zap,
+      tools: ["Excel", "Power Query", "Power BI", "Data Modeling"],
+      color: "bg-green-600",
+      type: "powerbi",
+      images: ["/lovable-uploads/d548c121-f5ba-4b67-9ba9-0fce537bc076.png"],
+      details: {
+        problem: "Need for comprehensive analysis of electric vehicle adoption trends, market performance, and geographical distribution to support policy making and business strategies in the sustainable transport sector.",
+        overview: "Built an EV adoption dashboard to track growth, performance, and market trends of electric vehicles. Provides insights into BEV vs PHEV adoption, manufacturer performance, and geographical distribution patterns.",
+        approach: [
+          "Excel: Data collection and initial analysis of EV registration data",
+          "Power Query: Data transformation and cleaning for analysis",
+          "Power BI: Interactive dashboard creation with advanced visualizations",
+          "Data Modeling: Structured approach for trend and performance analysis"
+        ],
+        dashboardHighlights: [
+          "🚘 Total Vehicles: BEVs & PHEVs adoption trends and growth analysis",
+          "🔋 Avg Electric Range: 29.09 miles efficiency & technological advancement insights",
+          "⚡ Market Share: BEV (145%) vs PHEV (100%) distribution analysis",
+          "📊 Trend by Model Year: Historical adoption growth from 2015-2020",
+          "🌍 Geographical Analysis: EV distribution across states & cities",
+          "🏷️ Top Manufacturers & Models: Market leader identification",
+          "✅ CAFV Eligibility: Clean Alternative Fuel Vehicle program analysis"
+        ],
+        results: [
+          "Tracked 11 total vehicles with detailed performance metrics",
+          "Analyzed average electric range of 29.09 miles across models",
+          "Identified market distribution: 16 BEV vehicles (145% of target)",
+          "Mapped geographical distribution across multiple cities",
+          "Revealed top manufacturers: Chevrolet, Audi, Chrysler, Ford",
+          "Analyzed CAFV eligibility for policy compliance"
+        ],
+        outcomes: "Provides insights into EV adoption trends, helps policymakers and businesses design strategies, and supports sustainable transport growth through data-driven decision making.",
+        improvements: [
+          "Add predictive analytics for future EV adoption",
+          "Implement charging infrastructure analysis",
+          "Create cost-benefit analysis dashboards",
+          "Add environmental impact metrics"
+        ],
+        github: "https://github.com/6Pritam/Electric-Vehicle-Analysis-Using-PowerBI-Excel",
+        demo: ""
+      }
     }
   ];
 
