@@ -3,6 +3,7 @@ import { Github, Linkedin, ExternalLink, MapPin, Phone, Mail, Copy } from "lucid
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-bg.jpg";
+import profilepic from "../assets/profilepic.jpg";
 
 const Hero = () => {
   const { toast } = useToast();
@@ -11,7 +12,7 @@ const Hero = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const roles = ["Data Analyst", "ML Engineer"];
+  const roles = ["Full-Stack Developer" ,"Cloud Enthusiast","MERN Stack Developer"];
 
   useEffect(() => {
     const currentText = roles[roleIndex];
@@ -41,24 +42,24 @@ const Hero = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/6Pritam",
+      url: "https://github.com/GourangaSahoo",
       icon: Github,
     },
     {
       name: "LinkedIn", 
-      url: "https://www.linkedin.com/in/pritam-kumar-ghosh-158185288",
+      url: "https://www.linkedin.com/in/gouranga-sahoo-154396289/",
       icon: Linkedin,
     },
     {
       name: "HackerRank",
-      url: "https://www.hackerrank.com/profile/gpritam1471",
+      url: "https://www.hackerrank.com/profile/gourangasahoo711",
       icon: ExternalLink,
       isCustomIcon: true,
       customIconType: "hackerrank"
     },
     {
       name: "LeetCode", 
-      url: "https://leetcode.com/u/Pritam_Kumar_Ghosh/",
+      url: "https://leetcode.com/u/gourangasahoo712/",
       icon: ExternalLink,
       isCustomIcon: true,
       customIconType: "leetcode"
@@ -96,21 +97,24 @@ const Hero = () => {
         {/* Main Content */}
         <div className="space-y-8 animate-fade-in">
           {/* Profile Photo */}
-          <div className="flex justify-center mb-8">
-            <div className="relative">
+          <div className="flex justify-center items-center mb-8">
+            <div className="relative flex items-center justify-center">
+                {/* Profile Image */}
               <img 
-                src="/lovable-uploads/3e3d8243-8a15-4cbf-895c-8b624998408d.png"
-                alt="Pritam Kumar Ghosh - Data Analyst and ML Engineer"
-                className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-primary/30 shadow-hero hover:border-primary/50 transition-all duration-500"
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-secondary-accent/10 hover:from-primary/20 hover:to-secondary-accent/20 transition-all duration-500"></div>
-            </div>
-          </div>
+                  src={profilepic}
+                    alt="Gouranga Sahoo — Full-Stack Engineer Portfolio"
+                    className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover object-top border-4 border-primary/30 shadow-hero hover:border-primary/50 transition-all duration-500"
+  />
+  
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-secondary-accent/10 hover:from-primary/20 hover:to-secondary-accent/20 transition-all duration-500"></div>
+</div>
+</div>
 
           {/* Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-sora font-bold tracking-tight">
-              Pritam Kumar <span className="gradient-text">Ghosh</span>
+              Gouranga <span className="gradient-text">Sahoo</span>
             </h1>
             
             <div className="text-xl md:text-2xl font-medium h-16 flex items-center justify-center">
@@ -124,7 +128,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I turn raw data into clear insights and practical products using Python, SQL, and Power BI.
+            I transform ideas into powerful web applications by combining clean frontend design with robust backend logic, ensuring seamless user experiences.
           </p>
 
           {/* CTA Buttons */}
@@ -184,7 +188,7 @@ const Hero = () => {
               
               <div className="flex items-center justify-center space-x-2 text-muted-foreground">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                <span>Open to work as a data analyst</span>
+                <span>Open to work as a Full-Stack Developer</span>
               </div>
               
               <div className="flex items-center justify-center space-x-2 text-muted-foreground">
@@ -200,7 +204,7 @@ const Hero = () => {
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors group"
               >
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">pritamkumarghosh351@gmail.com</span>
+                <span className="text-sm">gourangasahoo712@gmail.com</span>
                 <Copy className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
               
@@ -211,7 +215,7 @@ const Hero = () => {
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors group"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">+91 6371763610</span>
+                <span className="text-sm">+91 7684861646</span>
                 <Copy className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             </div>

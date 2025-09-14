@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Send, Download, Github, Linkedin, ExternalLink, Calendar } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { useMailStore } from "@/store/useMailStore";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -14,24 +15,25 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const {send} = useMailStore()
 
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "pritamkumarghosh351@gmail.com",
+      value: "gourangasahoo712@gmail.com",
       action: () => window.open("mailto:pritamkumarghosh351@gmail.com")
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 6371763610",
-      action: () => window.open("tel:+916371763610")
+      value: "+91 7684861646",
+      action: () => window.open("tel:+917684861646")
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Balasore, India — 756036",
+      value: "Balasore, India — 756083",
       action: null
     }
   ];
@@ -39,19 +41,19 @@ const Contact = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/6Pritam",
+      url: "https://github.com/GourangaSahoo",
       icon: Github,
       color: "hover:text-gray-800"
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/pritam-kumar-ghosh-158185288",
+      url: "https://www.linkedin.com/in/gouranga-sahoo-154396289/",
       icon: Linkedin,
       color: "hover:text-blue-600"
     },
     {
       name: "HackerRank",
-      url: "https://www.hackerrank.com/profile/gpritam1471",
+      url: "https://www.hackerrank.com/profile/gourangasahoo711",
       icon: ExternalLink,
       color: "hover:text-green-600",
       isCustomIcon: true,
@@ -59,7 +61,7 @@ const Contact = () => {
     },
     {
       name: "LeetCode",
-      url: "https://leetcode.com/u/Pritam_Kumar_Ghosh/",
+      url: "https://leetcode.com/u/gourangasahoo712/",
       icon: ExternalLink,
       color: "hover:text-orange-600",
       isCustomIcon: true,
@@ -69,20 +71,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
-    const body = encodeURIComponent(`Hi Pritam,\n\n${formData.message}\n\nBest regards,\n${formData.name}\n${formData.email}`);
-    const mailtoLink = `mailto:pritamkumarghosh351@gmail.com?subject=${subject}&body=${body}`;
-    
-    window.open(mailtoLink);
-    
-    toast({
-      title: "Email client opened",
-      description: "Your default email client should open with the message pre-filled.",
-    });
-
-    // Reset form
+    send(formData)
+      // Reset form
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
@@ -217,19 +207,19 @@ const Contact = () => {
                   <Button 
                     variant="outline" 
                     className="w-full btn-pill justify-start"
-                    onClick={() => window.open("https://drive.google.com/file/d/1U1I0ao7gFYLjhdjo2pIWyOOfz6Ela6RP/view?usp=drive_link", "_blank")}
+                    onClick={() => window.open("https://drive.google.com/file/d/1U3gWMJt_qFemMak8eU0ebuYMoQAOyvZ9/view?usp=sharing")}
                   >
                     <Download className="h-4 w-4 mr-2" />
                     Download Resume
                   </Button>
-                  <Button
+                  {/* <Button
                     variant="outline"
                     className="w-full btn-pill justify-start"
-                    onClick={() => window.open("https://topmate.io/pritam_kumar_ghosh/", "_blank")}
+                    // onClick={() => window.open("https://topmate.io/pritam_kumar_ghosh/", "_blank")}
                   >
                     <Calendar className="h-4 w-4 mr-2" />
                     Schedule a Call
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>

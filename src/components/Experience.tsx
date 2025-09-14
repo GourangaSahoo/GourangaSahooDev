@@ -3,29 +3,28 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      role: "Machine Learning Engineer Intern",
-      company: "APT Software Avenues Pvt. Ltd.",
-      location: "Kolkata, IN",
-      duration: "May 2024 – Jul 2024",
+      role: "AWS Intern ",
+      company: "Rest Coder Academy",
+      location: "Bengaluru, IN",
+      duration: "May 2025 – Jun 2025",
       type: "Internship",
       achievements: [
-        "Automated model training workflows to speed up experiments",
-        "Evaluated models with accuracy, precision, recall, F1, AUC; improved reliability",
-        "Optimized models to boost accuracy and cut compute time",
-        "Built web apps to serve real-time predictions"
+        "Gained hands-on experience with core AWS services including EC2, IAM, S3, Lambda, SNS, CloudWatch, RDS, and Amplify.",
+        "Deployed 3 full-stack applications using AWS (EC2, Amplify), achieving 99% uptime and improving scalability by 40%.",
+        "Built and deployed web applications to serve real-time predictions with AWS integration.",
       ]
     },
     {
-      role: "Data Analyst Intern",
-      company: "Rinex",
-      location: "Bengaluru, IN", 
+      role: "Full Stack Intern ",
+      company: "Yhills-EduTech",
+      location: "Remote", 
       duration: "Jan 2024 – Mar 2024",
       type: "Internship",
       achievements: [
-        "Performed EDA on large datasets to find patterns and trends",
-        "Built ML models for classification and regression tasks",
-        "Created visualizations and dashboards with Tableau, Power BI, and R Shiny",
-        "Cleaned and transformed raw data for analysis and reporting"
+        "Developed a full-stack e-commerce platform handling 100+ products and supporting 50+ concurrent users, improving shopping experience and performance by 30%",
+        "Gained hands-on experience with the MERN stack (MongoDB, Express.js, React.js, Node.js) for full-stack development.",
+        "Developed and integrated RESTful APIs to connect frontend and backend services.",
+        "Enhanced team collaboration and code quality using Git/GitHub for version control."
       ]
     }
   ];

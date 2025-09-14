@@ -1,102 +1,118 @@
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { BarChart3, Brain, Code, Users, Globe } from "lucide-react";
+import { Globe, Server, Layers, Code } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Data & BI",
-      icon: BarChart3,
+      title: "Programming Languages",
+      icon: Code,
+      color: "text-orange-500",
+      skills: ["Java", "Python", "C"],
+    },
+    {
+      title: "Frontend Development",
+      icon: Layers,
       color: "text-blue-500",
       skills: [
-        { name: "Data Analysis", level: 90 },
-        { name: "Data Visualization", level: 85 },
-        { name: "Statistical Analysis", level: 80 },
-        { name: "Excel", level: 88 },
-        { name: "Advanced Excel", level: 88 },
-        { name: "Power BI", level: 85 },
-        { name: "ETL", level: 82 },
-        { name: "EDA (Exploratory Data Analysis)", level: 85 },
-        { name: "Power Query", level: 80 },
-        { name: "DAX", level: 78 },
-        { name: "Data Cleaning", level: 88 },
-        { name: "Data Modelling", level: 83 },
-        { name: "Data Processing", level: 86 },
-        { name: "Data Collection", level: 85 }
-      ]
+        "React.js",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Mantine UI",
+        "Bootstrap",
+        "Daisy UI",
+        "Material UI",
+        "Three.js",
+      ],
     },
     {
-      title: "ML & NLP",
-      icon: Brain,
-      color: "text-purple-500",
-      skills: [
-        { name: "Machine Learning", level: 88 },
-        { name: "Deep Learning", level: 82 },
-        { name: "NLP", level: 85 },
-        { name: "Model Development", level: 86 },
-        { name: "Data Preprocessing/Cleaning", level: 90 },
-        { name: "Model Testing", level: 83 },
-        { name: "OpenCV", level: 85 },
-        { name: "YOLO", level: 80 },
-        { name: "OCR", level: 82 },
-        { name: "LSTM", level: 78 },
-        { name: "TensorFlow", level: 85 }
-      ]
-    },
-    {
-      title: "Programming & DB",
-      icon: Code,
+      title: "Backend Development",
+      icon: Server,
       color: "text-green-500",
       skills: [
-        { name: "Python", level: 92 },
-        { name: "SQL", level: 85 }
-      ]
+        "Node.js",
+        "Express.js",
+        "Socket.io",
+        "REST APIs",
+        "Authentication (JWT/OAuth)",
+      ],
     },
     {
-      title: "Professional",
-      icon: Users,
-      color: "text-orange-500",
+      title: "Database & Cloud",
+      icon: Code,
+      color: "text-purple-500",
       skills: [
-        { name: "Team Leadership", level: 78 },
-        { name: "Teamwork", level: 90 },
-        { name: "Management Skills", level: 75 }
-      ]
-    }
+        "MongoDB",
+        "PostgreSQL",
+        "AWS (EC2, IAM, S3, Lambda, Amplify, SNS, CloudWatch, RDS)",
+        "Render",
+      ],
+    },
+    {
+      title: "Version Control & Tools",
+      icon: Code,
+      color: "text-yellow-500",
+      skills: ["Git", "GitHub", "Postman"],
+    },
+    {
+      title: "Coursework",
+      icon: Code,
+      color: "text-teal-500",
+      skills: ["Cloud Computing", "DSA", "System Design", "DBMS", "OOP"],
+    },
+    {
+      title: "Soft Skills",
+      icon: Code,
+      color: "text-pink-500",
+      skills: [
+        "Communication",
+        "Problem-Solving",
+        "Time Management",
+        "Team Collaboration",
+      ],
+    },
   ];
 
   const languages = [
-    { name: "Bengali", level: "Proficient" },
     { name: "Odia", level: "Proficient" },
     { name: "Hindi", level: "Proficient" },
-    { name: "English", level: "Advanced" }
+    { name: "English", level: "Advanced" },
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-sora font-bold mb-4">Skills & Technologies</h2>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-sora font-bold mb-3">
+            Skills & Technologies
+          </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
         </div>
 
         {/* Technical Skills */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
           {skillCategories.map((category, index) => (
-            <div key={index} className="glass-card p-6">
-              <div className="flex items-center gap-3 mb-6">
+            <div
+              key={index}
+              className="glass-card p-4 sm:p-5 md:p-6 flex flex-col gap-3"
+            >
+              <div className="flex items-center gap-3">
                 <category.icon className={`h-6 w-6 ${category.color}`} />
-                <h3 className="text-xl font-sora font-semibold">{category.title}</h3>
+                <h3 className="text-xl font-sora font-semibold">
+                  {category.title}
+                </h3>
               </div>
-              
-              <div className="space-y-4">
+
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, i) => (
-                  <div key={i}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                      <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <Progress value={skill.level} className="h-2" />
-                  </div>
+                  <Badge
+                    key={i}
+                    variant="secondary"
+                    className="px-3 py-1 text-sm font-medium"
+                  >
+                    {skill}
+                  </Badge>
                 ))}
               </div>
             </div>
@@ -104,17 +120,19 @@ const Skills = () => {
         </div>
 
         {/* Languages */}
-        <div className="glass-card p-6">
-          <div className="flex items-center gap-3 mb-6">
+        <div className="glass-card p-5">
+          <div className="flex items-center gap-3 mb-5">
             <Globe className="h-6 w-6 text-indigo-500" />
             <h3 className="text-xl font-sora font-semibold">Languages</h3>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {languages.map((language, index) => (
               <div key={index} className="text-center">
-                <div className="text-lg font-medium text-foreground mb-1">{language.name}</div>
-                <Badge variant="secondary" className="text-xs">
+                <div className="text-base font-semibold text-foreground mb-1">
+                  {language.name}
+                </div>
+                <Badge variant="secondary" className="text-xs px-2 py-1">
                   {language.level}
                 </Badge>
               </div>

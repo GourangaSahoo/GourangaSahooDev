@@ -3,351 +3,253 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Github, ExternalLink, Shield, BarChart3, Zap, Play } from "lucide-react";
+import { Github, ExternalLink, Shield, BarChart3, Zap, Play , MessageSquare,Users ,UtensilsCrossed,ShoppingCart} from "lucide-react";
 import weaponDetectionCard from "@/assets/weapon-detection-card.jpg";
 import pizzaDashboardCard from "@/assets/pizza-dashboard-card.jpg";
 import idExtractionCard from "@/assets/id-extraction-card.jpg";
-import autocompleteCard from "@/assets/autocomplete-card.jpg";
-import spamDetectionCard from "@/assets/spam-detection-card.jpg";
-import bankLoanCard from "@/assets/bank-loan-card.jpg";
-import evAnalysisCard from "@/assets/ev-analysis-card.jpg";
+import chat from "../assets/chat.png";
+import linkedin from "../assets/linkedin.png";
+import alumni from "../assets/alumni.png";
+import ecommerce from "../assets/e-comerce (1).png";
+import catring from "../assets/catring.jpg";
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const projects = [
     {
-      title: "Weapon Detection System",
-      subtitle: "Real-Time Weapon Detection & Alerts",
-      description: "AI-powered security system using YOLO for real-time weapon detection with instant SMS alerts to authorities.",
-      icon: Shield,
-      tools: ["Python", "Flask", "YOLO", "OpenCV", "Twilio API", "JavaScript"],
-      color: "bg-red-500",
-      type: "ml",
-      cardImage: weaponDetectionCard,
-      details: {
-        problem: "Need for an AI-powered criminal detection system that can monitor live video feeds and automatically alert authorities when weapons are detected, providing enhanced security for public spaces.",
-        overview: "An AI-powered criminal detection system that uses YOLO for real-time weapon detection via live video feed. Integrated with Flask for a web dashboard and Twilio API for instant SMS alerts to authorities with weapon type, location, and timestamp.",
-        features: [
-          "🎥 Live Video Feed with YOLO-based detection",
-          "📊 Web Dashboard for monitoring alerts and logs", 
-          "📍 Location Tracking via IP geolocation",
-          "📱 SMS Alerts to authorities with weapon type, confidence score, and timestamp",
-          "💾 Automatic Storage of detection frames with overlays",
-          "⏱ Smart Alert Cooldown to prevent spamming"
-        ],
-        approach: [
-          "Implemented YOLO (You Only Look Once) object detection for real-time weapon identification",
-          "Built Flask web application for live video feed processing and dashboard",
-          "Integrated Twilio API for instant SMS notifications to authorities",
-          "Added IP-based geolocation tracking for incident location identification",
-          "Created automatic frame storage system with detection overlays",
-          "Implemented smart cooldown mechanism to prevent alert spam"
-        ],
-        results: [
-          "Real-time weapon detection with high accuracy using YOLO",
-          "Instant SMS alerts with weapon type, confidence score, and location",
-          "Web dashboard for monitoring and log management",
-          "Automatic evidence collection through frame storage",
-          "Smart alert system preventing false positive spam",
-          "Scalable architecture for multiple camera integration"
-        ],
-        outcomes: "A real-time AI-powered security solution that can integrate with CCTV/IP cameras for public safety monitoring and crime prevention.",
-        improvements: [
-          "Add support for multiple weapon types and threat categories",
-          "Implement facial recognition for suspect identification",
-          "Create mobile app for security personnel",
-          "Add integration with existing security systems"
-        ],
-        github: "https://github.com/6Pritam/Weapon_Detection",
-        demo: ""
-      }
+  title: "Real-Time Chat Application",
+  subtitle: "Instant Messaging Platform",
+  description: "A full-stack real-time chat application with one-to-one messaging, online presence tracking, and media sharing using Socket.io and MongoDB.",
+  icon: MessageSquare,
+  tools: ["React.js", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+  color: "bg-blue-500",
+  type: "web",
+  cardImage: chat,
+  details: {
+    problem: "People need a reliable communication platform that supports instant messaging and real-time online presence tracking for better interaction.",
+    overview: "A MERN stack-based real-time chat application that allows users to send instant messages, share media, and track online presence. Built using React.js, Node.js, MongoDB, and Socket.io for seamless communication.",
+    features: [
+      "💬 One-to-One Real-Time Messaging",
+      "🟢 Online/Offline User Presence Tracking",
+      "📂 Media Sharing (images, files, etc.)",
+      "🔔 Instant Notifications for messages",
+      "🖥️ Responsive UI built with Tailwind CSS"
+    ],
+    approach: [
+      "Developed backend using Node.js and MongoDB to handle user authentication, chats, and media storage",
+      "Integrated Socket.io for real-time messaging and presence tracking",
+      "Designed frontend with React.js and Tailwind CSS for responsive user interface",
+      "Implemented notification system for new messages",
+      "Used JWT authentication for secure communication"
+    ],
+    results: [
+      "Seamless real-time messaging with instant delivery",
+      "Accurate online/offline presence detection",
+      "Responsive chat interface with media sharing",
+      "Stable and scalable backend for multiple users"
+    ],
+    outcomes: "A scalable real-time messaging platform suitable for personal and professional communication with secure and reliable features.",
+    improvements: [
+      "Implement group chat functionality",
+      "Add end-to-end encryption for enhanced security",
+      "Develop mobile app version with React Native",
+      "Integrate push notifications for mobile devices"
+    ],
+    github: "https://github.com/GourangaSahoo/fullstack-chat-app",
+    demo: "https://lnkd.in/g6qevYNv"
+  }
     },
+
     {
-      title: "Pizza Sales Dashboard",
-      subtitle: "SQL | Power BI | Excel Analytics",
-      description: "Interactive Power BI dashboard analyzing pizza sales data with KPIs, trends, and performance insights for business decisions.",
-      icon: BarChart3,
-      tools: ["SQL", "Excel", "Power Query", "Power BI"],
-      color: "bg-orange-500",
-      type: "powerbi",
-      cardImage: pizzaDashboardCard,
-      images: ["/lovable-uploads/49c187fc-7ffe-4bf3-b4ea-eb8c55fa548c.png", "/lovable-uploads/eefec041-5a9a-44b3-a1f5-2e416352528f.png"],
-      details: {
-        problem: "The business needed comprehensive insights on revenue, order trends, sales by category & size, and identification of best/worst performing pizzas to make data-driven decisions.",
-        overview: "Analyzed pizza sales data to calculate KPIs, track sales trends, and identify top/bottom-performing pizzas. Built an interactive Power BI dashboard for decision-making.",
-        approach: [
-          "SQL: Data extraction and KPI calculation from raw sales data",
-          "Excel: Data cleaning and preliminary analysis",
-          "Power Query: Data transformation and modeling",
-          "Power BI: Interactive dashboard creation with advanced visualizations"
-        ],
-        dashboardHighlights: [
-          "📊 KPI Cards: Total Revenue, Avg Order Value, Total Orders, Avg Pizzas per Order",
-          "📈 Daily & Monthly Trend charts for sales analysis",
-          "🥧 Sales by Category & Size visualization with pie charts",
-          "🏆 Top/Bottom 5 Pizzas analysis with bar/funnel charts",
-          "📅 Insights on busiest days, peak times, and customer preferences",
-          "🎯 Interactive filters for category, size, and time period analysis"
-        ],
-        results: [
-          "Identified peak sales periods and seasonal trends",
-          "Discovered top-performing pizza categories and sizes",
-          "Revealed customer ordering patterns and preferences",
-          "Highlighted underperforming products for strategic decisions",
-          "Created actionable insights for inventory management",
-          "Enabled data-driven pricing and promotion strategies"
-        ],
-        outcomes: "Helped identify customer behavior, best sellers, and underperforming products, supporting data-driven sales strategies and business growth.",
-        improvements: [
-          "Add customer segmentation analysis",
-          "Implement predictive analytics for demand forecasting",
-          "Create automated reporting and alert systems",
-          "Integrate with real-time sales data sources"
-        ],
-        github: "https://github.com/6Pritam/Pizza-Sales-Dashboard-using-SQL-Power-BI-Excel",
-        demo: ""
-      }
-    },
+  title: "Catering Management",
+  subtitle: "React.js | Node.js | MongoDB | Mantine | Tabler | Tailwind CSS",
+  description: "A real-time Catering Management System with a client-facing landing page for inquiries and bookings, along with admin and manager dashboards for efficient event coordination.",
+  icon: UtensilsCrossed,
+  tools: ["React.js", "Node.js", "MongoDB", "Mantine", "Tabler", "Tailwind CSS", "JavaScript"],
+  color: "bg-emerald-600",
+  type: "webapp",
+  cardImage: catring,
+  images: ["/lovable-uploads/catering-1.png", "/lovable-uploads/catering-2.png"],
+  details: {
+    problem: "Traditional catering businesses often struggle with manual coordination, scattered bookings, and inefficient communication between clients, managers, and administrators.",
+    overview: "Designed and implemented a Catering Management System to streamline inquiries, bookings, and operational workflows with dedicated dashboards for administrators and managers.",
+    approach: [
+      "React.js: Built responsive and interactive client landing page",
+      "Node.js: Developed backend APIs for inquiries, bookings, and dashboard features",
+      "MongoDB: Managed event, client, and booking data storage",
+      "Mantine & Tabler: Designed professional and user-friendly dashboards",
+      "Tailwind CSS: Created modern and responsive UI components"
+    ],
+    dashboardHighlights: [
+      "📝 Client-facing Landing Page for inquiries and booking requests",
+      "📊 Admin Dashboard to monitor bookings, clients, and events",
+      "👨‍💼 Manager Dashboard for operational coordination",
+      "🔔 Real-time updates for event scheduling and status tracking",
+      "📂 Centralized database for client and event management"
+    ],
+    results: [
+      "Improved booking efficiency through automated inquiry handling",
+      "Enhanced transparency between admins, managers, and clients",
+      "Streamlined operations with real-time updates",
+      "Provided professional and user-friendly digital platform for catering services"
+    ],
+    outcomes: "The system reduced operational overhead, minimized booking errors, and improved client satisfaction by providing a seamless digital experience for event management.",
+    improvements: [
+      "Integrate online payment gateway for bookings",
+      "Add analytics dashboard for revenue and client insights",
+      "Enable real-time chat between clients and managers",
+      "Implement push/email notifications for booking confirmations"
+    ],
+    github: "https://github.com/Prateeksen27/CMS/tree/Gouranga",
+    demo: ""
+  }
+}
+,
+
     {
-      title: "Government ID Card Data Extraction",
-      subtitle: "OCR | NLP | Structured Data Processing",
-      description: "Converts unstructured text from government ID cards into structured data fields using advanced OCR and NLP techniques.",
-      icon: Shield,
-      tools: ["Python", "OCR", "NLP", "OpenCV", "Tesseract"],
-      color: "bg-blue-500",
-      type: "ml",
-      cardImage: idExtractionCard,
-      details: {
-        problem: "Manual data entry from government ID cards is time-consuming, error-prone, and inefficient for large-scale document processing systems.",
-        overview: "An automated system that extracts and structures information from government ID cards using OCR and NLP technologies, converting unstructured text into organized data fields.",
-        features: [
-          "🔍 Advanced OCR for text extraction from ID cards",
-          "🧠 NLP processing for data field identification",
-          "📋 Structured data output in JSON/CSV format",
-          "🎯 High accuracy text recognition and parsing",
-          "📄 Support for multiple ID card formats",
-          "⚡ Fast batch processing capabilities"
-        ],
-        approach: [
-          "Implemented advanced OCR using Tesseract and OpenCV for image preprocessing",
-          "Applied NLP techniques for text parsing and field identification",
-          "Created data validation and error correction mechanisms",
-          "Built structured output formatting for database integration",
-          "Optimized for various image qualities and lighting conditions",
-          "Developed batch processing capabilities for large datasets"
-        ],
-        results: [
-          "Automated data entry process with 95%+ accuracy",
-          "Reduced manual processing time by 80%",
-          "Structured data output ready for database integration",
-          "Support for multiple government ID formats",
-          "Robust error handling and data validation",
-          "Scalable solution for high-volume processing"
-        ],
-        outcomes: "Significantly reduces manual effort in data entry processes, improves accuracy, and enables faster document processing for government and business applications.",
-        improvements: [
-          "Add support for international ID card formats",
-          "Implement machine learning for improved field recognition",
-          "Create web interface for easier document upload",
-          "Add real-time processing capabilities"
-        ],
-        github: "",
-        demo: ""
-      }
-    },
+  title: "Alumni Association Portal",
+  subtitle: "Node.js | Express.js | PostgreSQL | EJS | Bootstrap",
+  description: "A web-based Alumni Association Portal built to connect alumni with students and faculty, enabling networking, mentorship, and event management through a secure platform.",
+  icon: Users,
+  tools: ["Node.js", "Express.js", "PostgreSQL", "EJS", "Bootstrap", "JavaScript"],
+  color: "bg-indigo-600",
+  type: "webapp",
+  cardImage: alumni,
+  images: ["/lovable-uploads/alumni-portal-1.png", "/lovable-uploads/alumni-portal-2.png"],
+  details: {
+    problem: "Colleges often lack a unified digital platform to maintain alumni relationships, organize events, and provide mentorship opportunities for students.",
+    overview: "Developed a responsive Alumni Association Portal that allows alumni registration, event participation, and student-alumni interaction, while providing admins tools to manage the community effectively.",
+    approach: [
+      "EJS: Dynamic server-side rendering for alumni and student views",
+      "Node.js & Express: Backend API for authentication, events, and profiles",
+      "PostgreSQL: Relational database design for alumni, events, and communication",
+      "Bootstrap & JavaScript: Built responsive UI with interactive features"
+    ],
+    dashboardHighlights: [
+      "👤 Alumni & Student Profiles with education and work history",
+      "📅 Event Management: Create, manage, and register for alumni events",
+      "💬 Forum & Messaging system for alumni-student networking",
+      "🔐 Secure authentication with role-based access (Admin, Alumni, Student)",
+      "📊 Admin Dashboard for monitoring users, posts, and events"
+    ],
+    results: [
+      "Established a digital bridge between alumni and students",
+      "Streamlined event creation and alumni participation",
+      "Enabled career guidance and mentorship opportunities",
+      "Improved alumni engagement through interactive features"
+    ],
+    outcomes: "Enhanced alumni-student relations, created a networking hub for career support, and simplified event management for the institution.",
+    improvements: [
+      "Add real-time chat using WebSockets",
+      "Integrate job posting and referral system",
+      "Enable push/email notifications for events and messages",
+      "Expand analytics for alumni engagement insights"
+    ],
+    github: "https://github.com/GourangaSahoo/Alumni_Association",
+    demo: ""
+  }
+}
+,
     {
-      title: "Text Autocomplete & Suggestion System",
-      subtitle: "LSTM | NLP | Real-time Prediction",
-      description: "Next-word prediction system using LSTM neural networks trained on PDF-extracted text with interactive UI for real-time suggestions.",
-      icon: Zap,
-      tools: ["Python", "LSTM", "TensorFlow", "NLP", "Flask", "JavaScript"],
-      color: "bg-green-500",
-      type: "ml",
-      cardImage: autocompleteCard,
-      details: {
-        problem: "Need for an intelligent text prediction system that can learn from specific document corpora and provide contextually relevant word suggestions to improve typing efficiency.",
-        overview: "A custom text autocomplete system using LSTM neural networks, trained on PDF-extracted text data, featuring an interactive UI for model training and real-time word prediction.",
-        features: [
-          "🧠 LSTM-based next-word prediction model",
-          "📚 PDF text extraction for training data",
-          "🎯 Real-time word suggestions and autocomplete",
-          "💻 Interactive web interface for model training",
-          "📊 Performance metrics and accuracy tracking",
-          "⚡ Fast response time for real-time predictions"
-        ],
-        approach: [
-          "Implemented PDF text extraction pipeline for training data preparation",
-          "Built LSTM neural network architecture for sequence modeling",
-          "Created text preprocessing and tokenization workflows",
-          "Developed Flask web application for model interaction",
-          "Implemented real-time prediction API endpoints",
-          "Added model performance monitoring and evaluation metrics"
-        ],
-        results: [
-          "Achieved high accuracy in next-word predictions",
-          "Real-time text suggestions with sub-second response time",
-          "Scalable model architecture for different text domains",
-          "Interactive training interface for model customization",
-          "Comprehensive evaluation metrics and performance tracking",
-          "Deployable system ready for integration"
-        ],
-        outcomes: "Demonstrates expertise in sequence modeling and NLP, providing a practical solution for improving typing efficiency and showcasing advanced deep learning capabilities.",
-        improvements: [
-          "Add support for multiple languages",
-          "Implement attention mechanisms for better context understanding",
-          "Create mobile app version",
-          "Add personalized learning from user behavior"
-        ],
-        github: "",
-        demo: ""
-      }
-    },
-    {
-      title: "Spam Detection System",
-      subtitle: "ML | Deep Learning | Email Classification",
-      description: "Advanced spam classification system using machine learning and deep learning techniques for filtering emails and messages.",
-      icon: Shield,
-      tools: ["Python", "Scikit-learn", "TensorFlow", "NLP", "Pandas", "Flask"],
-      color: "bg-purple-500",
-      type: "ml",
-      cardImage: spamDetectionCard,
-      details: {
-        problem: "Email spam poses security risks and reduces productivity. Need for an intelligent system that can accurately classify and filter spam messages with high precision.",
-        overview: "A comprehensive spam detection system that uses both traditional machine learning and deep learning approaches to classify emails and messages, providing a deployable solution for spam filtering.",
-        features: [
-          "🤖 Multiple ML algorithms for spam classification",
-          "🧠 Deep learning models for advanced pattern recognition",
-          "📧 Email and text message processing capabilities",
-          "📊 Performance comparison between different models",
-          "🎯 High accuracy with low false positive rates",
-          "🚀 Deployable API for real-time classification"
-        ],
-        approach: [
-          "Implemented feature extraction using TF-IDF and word embeddings",
-          "Trained multiple ML models: Naive Bayes, SVM, Random Forest",
-          "Built deep learning models using neural networks and LSTM",
-          "Created comprehensive text preprocessing pipeline",
-          "Developed model evaluation and comparison framework",
-          "Built Flask API for model deployment and inference"
-        ],
-        results: [
-          "Achieved 95%+ accuracy in spam classification",
-          "Low false positive rate maintaining email reliability",
-          "Robust performance across different email formats",
-          "Fast classification suitable for real-time filtering",
-          "Comprehensive model comparison and optimization",
-          "Production-ready deployment pipeline"
-        ],
-        outcomes: "Provides a reliable spam filtering solution that improves communication security and productivity while demonstrating proficiency in both traditional ML and deep learning approaches.",
-        improvements: [
-          "Add support for multimedia content analysis",
-          "Implement online learning for adaptive filtering",
-          "Create user feedback integration for model improvement",
-          "Add multi-language spam detection capabilities"
-        ],
-        github: "",
-        demo: ""
-      }
-    },
-    {
-      title: "Bank Loan Analysis",
-      subtitle: "Power BI | SQL | Excel Analytics",
-      description: "Analyzed 38.6K+ loan applications to evaluate portfolio health, repayment risks, and borrower reliability with comprehensive dashboards.",
-      icon: BarChart3,
-      tools: ["SQL", "MS SQL Server", "Excel", "Power Query", "Power BI"],
-      color: "bg-blue-600",
-      type: "powerbi",
-      cardImage: bankLoanCard,
-      images: [
-        "/lovable-uploads/175933aa-2b18-475d-a193-9b4cc6bd3742.png",
-        "/lovable-uploads/bfa30879-5760-4abd-a075-f3356502e133.png",
-        "/lovable-uploads/80522faa-5238-47ee-a631-bb2b88824429.png"
-      ],
-      details: {
-        problem: "Banks needed comprehensive analysis of loan portfolio performance, risk assessment, and borrower behavior to make informed lending decisions and reduce default rates.",
-        overview: "Analyzed 38.6K+ loan applications to evaluate portfolio health, repayment risks, and borrower reliability. Built comprehensive Power BI dashboards with multi-level navigation for detailed loan analysis.",
-        approach: [
-          "SQL (MS SQL Server): Complex queries for data extraction and KPI calculations",
-          "Excel: Data cleaning and preliminary analysis of loan datasets",
-          "Power Query: Advanced data transformation and modeling",
-          "Power BI: Multi-dashboard solution with Summary, Overview, and Details views"
-        ],
-        dashboardHighlights: [
-          "📊 KPIs: Loan Applications (38.6K), Funded ($435.8M), Received ($473.1M), Avg Interest Rate (12%), Avg DTI (13.3%)",
-          "✅ Good (86.2%) vs Bad (13.8%) Loan Segmentation with risk analysis",
-          "🏠 Loan distribution by Purpose, Home Ownership, Term, Employment Length",
-          "📈 Monthly trend analysis for seasonality and growth patterns",
-          "🔍 Multi-level navigation: Summary, Overview, Details dashboards",
-          "📋 Detailed loan records with borrower profiles and payment history"
-        ],
-        results: [
-          "Identified 86.2% good loans vs 13.8% bad loans for risk assessment",
-          "Analyzed $435.8M in funded amounts with $473.1M received",
-          "Discovered seasonal trends and peak lending periods",
-          "Segmented borrowers by employment length and home ownership",
-          "Created actionable insights for loan approval processes",
-          "Built comprehensive risk profiling dashboard"
-        ],
-        outcomes: "Delivered actionable insights for banks to reduce defaults, optimize funding strategies, and maximize returns through data-driven lending decisions.",
-        improvements: [
-          "Add predictive modeling for default probability",
-          "Implement real-time risk scoring",
-          "Create automated alert systems for high-risk loans",
-          "Add customer lifetime value analysis"
-        ],
-        github: "https://github.com/6Pritam/Bank-Loan-Analysis",
-        demo: ""
-      }
-    },
-    {
-      title: "Electric Vehicle Analysis Dashboard",
-      subtitle: "Power BI | Excel | Market Insights",
-      description: "Built comprehensive EV adoption dashboard tracking growth, performance, and market trends to support sustainable transport strategies.",
-      icon: Zap,
-      tools: ["Excel", "Power Query", "Power BI", "Data Modeling"],
-      color: "bg-green-600",
-      type: "powerbi",
-      cardImage: evAnalysisCard,
-      images: ["/lovable-uploads/d548c121-f5ba-4b67-9ba9-0fce537bc076.png"],
-      details: {
-        problem: "Need for comprehensive analysis of electric vehicle adoption trends, market performance, and geographical distribution to support policy making and business strategies in the sustainable transport sector.",
-        overview: "Built an EV adoption dashboard to track growth, performance, and market trends of electric vehicles. Provides insights into BEV vs PHEV adoption, manufacturer performance, and geographical distribution patterns.",
-        approach: [
-          "Excel: Data collection and initial analysis of EV registration data",
-          "Power Query: Data transformation and cleaning for analysis",
-          "Power BI: Interactive dashboard creation with advanced visualizations",
-          "Data Modeling: Structured approach for trend and performance analysis"
-        ],
-        dashboardHighlights: [
-          "🚘 Total Vehicles: BEVs & PHEVs adoption trends and growth analysis",
-          "🔋 Avg Electric Range: 29.09 miles efficiency & technological advancement insights",
-          "⚡ Market Share: BEV (145%) vs PHEV (100%) distribution analysis",
-          "📊 Trend by Model Year: Historical adoption growth from 2015-2020",
-          "🌍 Geographical Analysis: EV distribution across states & cities",
-          "🏷️ Top Manufacturers & Models: Market leader identification",
-          "✅ CAFV Eligibility: Clean Alternative Fuel Vehicle program analysis"
-        ],
-        results: [
-          "Tracked 11 total vehicles with detailed performance metrics",
-          "Analyzed average electric range of 29.09 miles across models",
-          "Identified market distribution: 16 BEV vehicles (145% of target)",
-          "Mapped geographical distribution across multiple cities",
-          "Revealed top manufacturers: Chevrolet, Audi, Chrysler, Ford",
-          "Analyzed CAFV eligibility for policy compliance"
-        ],
-        outcomes: "Provides insights into EV adoption trends, helps policymakers and businesses design strategies, and supports sustainable transport growth through data-driven decision making.",
-        improvements: [
-          "Add predictive analytics for future EV adoption",
-          "Implement charging infrastructure analysis",
-          "Create cost-benefit analysis dashboards",
-          "Add environmental impact metrics"
-        ],
-        github: "https://github.com/6Pritam/Electric-Vehicle-Analysis-Using-PowerBI-Excel",
-        demo: ""
-      }
-    }
+  title: "LinkedIn Clone",
+  subtitle: "React.js | Node.js | Express.js | Tailwind CSS",
+  description: "A full-stack LinkedIn clone replicating core features like user authentication, posts, connections, and notifications with a responsive UI.",
+  icon: Users,
+  tools: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+  color: "bg-sky-600",
+  type: "webapp",
+  cardImage: linkedin,
+  details: {
+    problem: "Students and professionals often lack access to a platform where they can network, share professional updates, and interact, similar to LinkedIn.",
+    overview: "A LinkedIn-inspired social networking platform that provides user authentication, posting, connections, and notification systems with a modern responsive interface.",
+    features: [
+      "👤 User authentication with JWT and secure login/register",
+      "📝 Create, like, and comment on posts",
+      "🤝 Connection requests and professional networking",
+      "🔔 Notifications for posts, likes, and connections",
+      "📱 Responsive design using Tailwind CSS"
+    ],
+    approach: [
+      "Built frontend with React.js and Tailwind CSS for responsive UI",
+      "Developed backend with Node.js and Express.js for REST APIs",
+      "Implemented JWT authentication and role-based access",
+      "Designed MongoDB schema for users, posts, and notifications",
+      "Optimized performance with efficient API routing and modular structure"
+    ],
+    results: [
+      "Successfully implemented a LinkedIn-like social networking experience",
+      "Enabled interactive post creation, likes, and comments",
+      "Provided seamless user connections and notifications",
+      "Delivered a responsive and scalable platform for networking",
+      "Built a project showcasing full-stack development skills"
+    ],
+    outcomes: "Created a professional networking platform similar to LinkedIn that demonstrates strong skills in MERN stack development and modern UI design.",
+    improvements: [
+      "Add real-time chat and messaging system",
+      "Integrate AI-driven job recommendations",
+      "Enable advanced search and filtering for users and posts",
+      "Implement cloud storage for media files",
+      "Add analytics for user engagement tracking"
+    ],
+    github: "https://github.com/GourangaSahoo/linkedin-clone",
+    demo: "https://linkedin-clone-kx0h.onrender.com"
+  }
+}
+,
+{
+  title: "E-Commerce Platform",
+  subtitle: "MERN Stack | React.js | Node.js | Express.js | MongoDB | Tailwind CSS",
+  description: "A modern e-commerce website built on the MERN stack, offering product listings, shopping cart, order management, and secure checkout with an intuitive user experience.",
+  icon: ShoppingCart,
+  tools: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JavaScript"],
+  color: "bg-orange-600",
+  type: "webapp",
+  cardImage: ecommerce,
+  images: ["/lovable-uploads/ecommerce-1.png", "/lovable-uploads/ecommerce-2.png"],
+  details: {
+    problem: "Traditional shopping often limits product reach and lacks convenience, while many small businesses struggle to build scalable online platforms.",
+    overview: "Developed a full-featured E-Commerce Platform enabling product browsing, shopping cart management, order placement, and secure payments. Admins can manage products, orders, and user roles from a dedicated dashboard.",
+    approach: [
+      "React.js: Built responsive and dynamic product pages with shopping cart UI",
+      "Node.js & Express: Created backend APIs for products, users, orders, and authentication",
+      "MongoDB: Designed schemas for users, products, categories, carts, and orders",
+      "Tailwind CSS: Styled modern and mobile-first user interface",
+      "JWT Authentication: Secured login, signup, and role-based access"
+    ],
+    dashboardHighlights: [
+      "🛍️ Product Catalog with categories, images, and descriptions",
+      "🛒 Shopping Cart with real-time price calculation",
+      "💳 Secure Checkout with payment integration (Stripe/PayPal)",
+      "📦 Order Tracking for customers",
+      "👤 User Profiles with order history",
+      "🛠️ Admin Dashboard for managing products, categories, and orders",
+      "🔍 Search & Filters for quick product discovery",
+      "⭐ Wishlist & Product Reviews system"
+    ],
+    results: [
+      "Delivered a scalable online shopping experience with seamless checkout",
+      "Empowered admins with tools for inventory and order management",
+      "Improved customer engagement through reviews and wishlists",
+      "Increased sales potential for small businesses via digital presence"
+    ],
+    outcomes: "The platform simplified online shopping for users while providing businesses with a powerful management system to grow their e-commerce presence.",
+    improvements: [
+      "Integrate AI-based product recommendations",
+      "Add real-time chat support for customers",
+      "Implement subscription-based product deliveries",
+      "Expand analytics dashboard for sales and customer insights",
+      "Enable multi-vendor marketplace support"
+    ],
+    github: "https://github.com/GourangaSahoo/E-commerce",
+    demo: ""
+  }
+}
+
+,
   ];
+
 
   return (
     <section id="projects" className="py-20 bg-muted/20">

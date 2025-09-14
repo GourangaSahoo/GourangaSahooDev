@@ -5,39 +5,42 @@ import { ExternalLink, Award, Calendar, Star } from "lucide-react";
 const Certifications = () => {
   const certifications = [
     {
-      title: "Data Analytics with Python",
-      issuer: "NPTEL - IIT Roorkee",
+      title: " DSA Using Java",
+      issuer: "NPTEL -  IIT Kharagpur",
       date: "2024",
-      score: "72%",
+      score: "55%",
       level: "Elite",
-      description: "Comprehensive course covering data analysis techniques using Python, statistical methods, and data visualization.",
-      link: "https://www.linkedin.com/posts/pritam-kumar-ghosh-158185288_nptel-certificate-activity-7196570345355509760-NKH1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEXK9pQBQk5lRd08SH0B_juNyEHUJwapr0Y",
+      description: "Comprehensive course covering core data structures (arrays, linked lists, stacks, queues, trees, graphs) and algorithms (sorting, searching, dynamic programming) with practical implementation in Java.",
+      link: "https://www.linkedin.com/posts/gouranga-sahoo-154396289_data-structure-and-algorithms-using-java-activity-7266720057366323200-CbMD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYAdlABZPFyiY6JmRefO9TELl_9h-vPwpo",
       type: "Academic"
     },
     {
-      title: "SQL Gold Level (5⭐ Badge)",
-      issuer: "HackerRank",
-      date: "Aug 11, 2024",
-      level: "Gold",
-      description: "Achieved Gold Level certification with 5-star badge in SQL programming.",
-      type: "Programming"
+      title: " Full-Stack Web Development",
+      issuer: "Udemy",
+      date: "2024",
+      description: "Comprehensive bootcamp covering frontend (HTML, CSS, JavaScript, React.js), backend (Node.js, Express.js), and databases (MongoDB), along with deployment and version control using Git/GitHub.",
+      link: "https://www.linkedin.com/posts/gouranga-sahoo-154396289_web-development-activity-7302381618269167618-XyLJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYAdlABZPFyiY6JmRefO9TELl_9h-vPwpo",
+      type: "Academic"
     },
     {
-      title: "SQL (Basic)",
-      issuer: "HackerRank", 
-      date: "Aug 11, 2024",
-      description: "Covers simple queries, relationships, and aggregators.",
-      link: "https://lnkd.in/gtbdvQ2p",
-      type: "Programming"
+      title: "Data Analytics with Python",
+      issuer: "NPTEL - IIT Roorkee",
+      date: "2024",
+      score: "75%",
+      level: "Elite",
+      description: "Comprehensive course covering data analysis techniques using Python, statistical methods, and data visualization.",
+      link: "https://www.linkedin.com/posts/gouranga-sahoo-154396289_data-analytics-certificate-activity-7196755188919988225-Z61l?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYAdlABZPFyiY6JmRefO9TELl_9h-vPwpo",
+      type: "Academic"
     },
     {
-      title: "SQL (Intermediate)",
-      issuer: "HackerRank",
-      date: "Aug 11, 2024", 
-      description: "Includes complex joins, unions, and sub-queries.",
-      link: "https://lnkd.in/gMC4mDSz",
-      type: "Programming"
-    }
+      title: "Micro-Certification – Welcome to ServiceNow",
+      issuer: "ServiceNow",
+      date: "2025-07-04",
+      level: "Micro-Certification",
+      description: "Successfully completed certification requirements for Welcome to ServiceNow, gaining a solid foundation in ServiceNow platform.",
+      link: "https://www.linkedin.com/posts/gouranga-sahoo-154396289_servicenow-activity-7362488031154507776-kYB6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEYAdlABZPFyiY6JmRefO9TELl_9h-vPwpo",
+      type: "IT/Platform"
+    },
   ];
 
   return (

@@ -45,7 +45,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <div className="font-display font-bold text-2xl gradient-text">
-          Pritam
+          Gouranga
         </div>
 
         {/* Desktop Navigation */}
@@ -75,7 +75,7 @@ const Navigation = () => {
           <Button 
             variant="default" 
             className="hidden md:flex items-center space-x-2 btn-pill"
-            onClick={() => window.open("https://drive.google.com/file/d/1U1I0ao7gFYLjhdjo2pIWyOOfz6Ela6RP/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1U3gWMJt_qFemMak8eU0ebuYMoQAOyvZ9/view?usp=sharing")}
           >
             <Download className="h-4 w-4" />
             <span>Resume</span>
@@ -113,7 +113,7 @@ const Navigation = () => {
               <Button 
                 variant="default" 
                 className="flex items-center space-x-2 btn-pill"
-                onClick={() => window.open("https://drive.google.com/file/d/1U1I0ao7gFYLjhdjo2pIWyOOfz6Ela6RP/view?usp=drive_link", "_blank")}
+                onClick={() => window.open("https://drive.google.com/file/d/1U3gWMJt_qFemMak8eU0ebuYMoQAOyvZ9/view?usp=sharing")}
               >
                 <Download className="h-4 w-4" />
                 <span>Resume</span>

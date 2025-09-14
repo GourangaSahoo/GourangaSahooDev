@@ -7,21 +7,21 @@ const Education = () => {
       institution: "GIET University, Gunupur",
       duration: "Expected 2026",
       status: "Current",
-      description: "Specializing in Data Science and Machine Learning applications"
+      description: "Specializing in Full-Stack Web Development using the MERN stack and AWS cloud services."
     },
     {
       degree: "Senior Secondary",
-      institution: "Tokyo Advanced Higher Secondary School, Remuna, Balasore", 
+      institution: "Naidu Science H S School, BBSR", 
       duration: "Completed",
-      cgpa: "7.89",
-      description: "Science stream with focus on Mathematics and Computer Science"
+      cgpa: "75",
+      description: "Science stream with focus on Mathematics"
     },
     {
       degree: "Higher Secondary",
-      institution: "Saraswati Shishu Vidya Mandir, Bhograi, Balasore",
+      institution: "NMGN High School, Pratappur, Balasore",
       duration: "Completed", 
-      cgpa: "8.11",
-      description: "Strong foundation in core subjects and analytical thinking"
+      cgpa: "63",
+      description: "Strong foundation in core subjects"
     }
   ];
 
@@ -29,13 +29,13 @@ const Education = () => {
     {
       title: "HackerRank Profile",
       description: "Active problem solver with strong algorithmic skills",
-      link: "https://www.hackerrank.com/profile/gpritam1471",
+      link: "https://www.hackerrank.com/profile/gourangasahoo711",
       icon: "🏆"
     },
     {
       title: "LeetCode Profile", 
       description: "Regular practice in data structures and algorithms",
-      link: "https://leetcode.com/u/Pritam_Kumar_Ghosh/",
+      link: "https://leetcode.com/u/gourangasahoo712/",
       icon: "💡"
     }
   ];
@@ -69,7 +69,7 @@ const Education = () => {
                         )}
                         {edu.cgpa && (
                           <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                            CGPA: {edu.cgpa}
+                            Percentage: {edu.cgpa}
                           </span>
                         )}
                       </div>

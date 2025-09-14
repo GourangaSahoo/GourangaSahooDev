@@ -1,19 +1,38 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
+    /* ✅ JS + TS Support */
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+
+    /* ✅ Compatibility & Imports */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
+
+    /* ✅ Language & Target */
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "jsx": "react-jsx",
+
+    /* ✅ Strictness & Flexibility */
+    "strict": true,
     "noImplicitAny": false,
-    "noUnusedParameters": false,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* ✅ Clean Build */
     "skipLibCheck": true,
-    "allowJs": true,
+    "isolatedModules": true,
+    "noUnusedParameters": false,
     "noUnusedLocals": false,
-    "strictNullChecks": false
-  }
+    "noEmit": true
+  },
+  "include": ["src"]
 }

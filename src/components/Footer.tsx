@@ -16,24 +16,24 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com/6Pritam",
+      url: "https://github.com/GourangaSahoo",
       icon: Github,
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/pritam-kumar-ghosh-158185288",
+      url: "https://www.linkedin.com/in/gouranga-sahoo-154396289/",
       icon: Linkedin,
     },
     {
       name: "HackerRank",
-      url: "https://www.hackerrank.com/profile/gpritam1471",
+      url: "https://www.hackerrank.com/profile/gourangasahoo711",
       icon: ExternalLink,
       isCustomIcon: true,
       customIconType: "hackerrank"
     },
     {
       name: "LeetCode",
-      url: "https://leetcode.com/u/Pritam_Kumar_Ghosh/",
+      url: "https://leetcode.com/u/gourangasahoo712/",
       icon: ExternalLink,
       isCustomIcon: true,
       customIconType: "leetcode"
@@ -61,16 +61,16 @@ const Footer = () => {
               onClick={scrollToTop}
               className="font-display font-bold text-2xl gradient-text mb-4 hover:opacity-80 transition-opacity"
             >
-              Pritam Kumar Ghosh
+              Gouranga Sahoo
             </button>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Data Analyst and ML Engineer passionate about turning raw data into actionable insights. 
-              Let's build something amazing together.
+              MERN Stack & AWS Developer passionate about creating user-friendly and reliable web applications. 
+              Let’s build something amazing together.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>Made with</span>
               <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>Pritam</span>
+              <span>Gouranga</span>
             </div>
           </div>
 
@@ -122,7 +122,7 @@ const Footer = () => {
               variant="outline"
               size="sm"
               className="btn-pill"
-              onClick={() => window.open("mailto:pritamkumarghosh351@gmail.com")}
+              onClick={() => window.open("mailto:gourangasahoo712@gmail.com")}
             >
               Get In Touch
             </Button>
@@ -132,11 +132,11 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Pritam Kumar Ghosh. All rights reserved.
+            © {currentYear} Gouranga Sahoo. All rights reserved.
           </div>
           
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <span>Last updated: December 2024</span>
+            <span>Last updated: january 2025</span>
             <button
               onClick={scrollToTop}
               className="hover:text-primary transition-colors"
