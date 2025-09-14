@@ -58,7 +58,7 @@ const Projects = () => {
       "Integrate push notifications for mobile devices"
     ],
     github: "https://github.com/GourangaSahoo/fullstack-chat-app",
-    demo: "https://lnkd.in/g6qevYNv"
+    demo: "https://fullstack-chat-app-ivae.onrender.com/"
   }
     },
 
